@@ -2,7 +2,8 @@ body{
     display: grid;
     font-family: 'Roboto', sans-serif;
     grid-template-areas: 'header header header header'
-                        'section1 section1 section1 section1';
+                        'section1 section1 section1 section1'
+                        'section2 section2 section2 section2';
     grid-template-rows: 80vh auto;
     margin: 0;
     padding: 0;
@@ -128,6 +129,25 @@ header div{
 .section1 p{
     color: grey;
     margin: 0;
+}
+
+.section2{
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    display: grid;
+    grid-area: section2;
+    grid-template-areas: 'div1 div2';
+    justify-content: center; 
+}
+
+#div1{
+    grid-area: div1;
+    width: 40%;
+}
+
+#div2{
+    grid-area: div2;
+    width: 40%;
 }
 
 @media(max-width: 1100px){
