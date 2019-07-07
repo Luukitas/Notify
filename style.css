@@ -2,7 +2,8 @@ body{
     display: grid;
     font-family: 'Roboto', sans-serif;
     grid-template-areas: 'header header header header'
-                        'section1 section1 section1 section1';
+                        'section1 section1 section1 section1'
+                        'footer footer footer footer';
     grid-template-rows: 80vh auto;
     margin: 0;
     padding: 0;
@@ -173,4 +174,24 @@ header div{
         padding: 20px 0;
         width: 100%;
     }
+}
+
+.footer{
+    text-decoration: none;
+    color: grey;
+    padding-right: 30px;
+}
+
+a:hover{
+    color: white;
+}
+
+footer{
+    grid-area: footer;
+    background-color: lightgray;
+    height: 140px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
