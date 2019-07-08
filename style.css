@@ -3,6 +3,7 @@ body{
     font-family: 'Roboto', sans-serif;
     grid-template-areas: 'header header header header'
                         'section1 section1 section1 section1'
+                        'third third third third'
                         'footer footer footer footer';
     grid-template-rows: 80vh auto;
     margin: 0;
@@ -176,6 +177,45 @@ header div{
     }
 }
 
+.third{
+    grid-area: third;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*esta centralizando os itens do third no centro da tela*/
+}
+
+.ipsum{
+    max-width: 60%;
+}
+
+.case{
+    display: flex;
+}
+
+.img{
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+}
+
+.sn:hover{
+    background-color: gray;
+}
+
+.sn{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+h2{
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 14pt;
+}
+
 .footer{
     text-decoration: none;
     color: grey;
@@ -189,7 +229,7 @@ a:hover{
 footer{
     grid-area: footer;
     background-color: lightgray;
-    height: 140px;
+    height: 120px;
     display: flex;
     width: 100%;
     align-items: center;
