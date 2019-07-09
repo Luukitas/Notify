@@ -4,9 +4,10 @@ body{
     grid-template-areas: 'header header header header'
                         'section1 section1 section1 section1'
                         'section2 section2 section2 section2'
+                        'apresentacao apresentacao apresentacao apresentacao'
                         'third third third third'
                         'footer footer footer footer';
-    grid-template-rows: 80vh auto auto auto auto;
+    grid-template-rows: 80vh auto auto 400px auto auto;
     margin: 0;
     padding: 0;
 }
@@ -137,6 +138,138 @@ header span{
     margin: 0;
 }
 
+/* inicio seção de apresentação */
+.apresentacao {
+    grid-area: apresentacao;
+    background-color: rgb(202, 199, 199);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apresentacao__texto,
+.apresentacao__video {
+    width: 30%;
+    height: 70%;
+}
+
+.apresentacao__texto {
+    margin-right: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.apresentacao__texto h2 {
+    font-size: 16pt;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.apresentacao__texto p {
+    font-size: 10pt;
+    color: gray;
+    line-height: 20px;
+}
+
+.apresentacao__campo-email {
+    display: flex;
+}
+
+.apresentacao__campo-email button, input {
+    padding: 10px 20px;
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+
+.apresentacao__campo-email input {
+    border-radius: 10px 0 0 10px;
+    width: 70%;
+}
+
+.apresentacao__campo-email button {
+    width: 30%;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(13, 207, 13);
+    color: white;
+}
+
+.apresentacao__video iframe {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 600px;
+    }
+    .apresentacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .apresentacao__texto p {
+        margin-bottom: 25px;
+    }
+    .apresentacao__texto {
+        height: 35%;
+        margin: 30px 0 0 0;
+        text-align: center;
+        font-size: 28pt;
+    }
+
+    .apresentacao__texto p {
+        margin: 10px 0;
+    }
+    .apresentacao__campo-email button, input {
+        padding: 5px 10px;
+        font-size: 10pt;
+    }
+
+    .apresentacao__texto {
+        margin: 25px 0;
+        height: 185px;
+    }
+
+    .apresentacao__campo-email input,
+    .apresentacao__texto,
+    .apresentacao__video {
+        width: 80%;
+    }
+
+    .apresentacao__video {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .apresentacao__video iframe {
+        border-radius: unset;
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .apresentacao__texto {
+        height: 225px;
+    }
+    .apresentacao__video {
+        margin-bottom: 50px;
+        height: 200px;
+        width: 100%;
+    }
+    .apresentacao__video iframe {
+        height: 100%;
+    }
+}
+
 .section2{
     align-items: center;
     background-color: rgb(180, 180, 180);
@@ -234,6 +367,7 @@ a:hover{
 }
 
 footer{
+    margin-top: 40px;
     grid-area: footer;
     background-color: lightgray;
     height: 120px;
@@ -313,5 +447,12 @@ footer span{
 
     .fotos :not(.fica){
         display: none;
+    }
+
+    .fica{
+        width: 100px;
+        height: 100px;
+        margin-right: 1em;
+        border-radius: 10%;
     }
 }
