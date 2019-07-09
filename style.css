@@ -38,20 +38,20 @@ header span{
     color: rgb(15, 192, 15);
 }
 
-#header1{
+.header1{
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     grid-area: header1;
 }
 
-#header1 ul{
+.header1 ul{
     display: flex;
     list-style: none;
     padding: 0;
 }
 
-#header1 li{
+.header1 li{
     align-items: center;
     background-color: rgba(0,0,0, 0.4);
     border-radius: 50%;
@@ -63,25 +63,25 @@ header span{
     width: 60px;
 }
 
-#header1 li:hover{
+.header1 li:hover{
     background-color: rgb(25, 153, 25);
 }
 
-#header1 a{
+.header1 a{
     display: block;
 }
 
-#header1 img{
+.header1 img{
     width: 30px;
 }
 
-#header2{
+.header2{
     display: flex;
     grid-area: header2;
     align-items: flex-end;
 }
 
-#header2 img{
+.header2 img{
     height: 410px;
     width: 360px;
 }
@@ -221,6 +221,12 @@ header span{
     width: 60%;
 }
 
+.img:hover{
+    width: 100px;
+    height: 100px;
+
+}
+
 .case{
     display: flex;
 }
@@ -237,7 +243,12 @@ header span{
     margin: 10px;
 }
 
-#redes a{
+.redes{
+    display: flex;
+    flex-direction: row;
+}
+
+.redes a{
     align-items: center;
     background-color: rgb(180, 180, 180);
     border-radius: 50%;
@@ -246,7 +257,7 @@ header span{
     margin: 5px;
 }
 
-#redes a:hover{
+.redes a:hover{
     background-color: rgb(15, 192, 15);
 }
 
@@ -291,7 +302,7 @@ footer span{
         grid-template-rows: 40vh auto;
     }
 
-    #header2 img{
+    .header2 img{
         height: 80%;
         width: 100%;
     }
@@ -312,12 +323,12 @@ footer span{
         background-size: cover;
     }
 
-    #header1{
+    .header1{
         display: flex;
         justify-content: center;
     }
     
-    #header2{
+    .header2{
         display: none;
     }
 
