@@ -366,6 +366,7 @@ a:hover{
 }
 
 footer{
+    margin-top: 40px;
     grid-area: footer;
     background-color: lightgray;
     height: 120px;
@@ -445,5 +446,12 @@ footer span{
 
     .fotos :not(.fica){
         display: none;
+    }
+
+    .fica{
+        width: 100px;
+        height: 100px;
+        margin-right: 1em;
+        border-radius: 10%;
     }
 }
